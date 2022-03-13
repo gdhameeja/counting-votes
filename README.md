@@ -26,6 +26,7 @@ https://developer.twitter.com/en/docs/tutorials/stream-tweets-in-real-time
 
 - Api to add rule for streaming 
 
+```
 curl -X POST 'https://api.twitter.com/2/tweets/search/stream/rules' \ 
 
 -H "Content-type: application/json" \ 
@@ -41,10 +42,11 @@ curl -X POST 'https://api.twitter.com/2/tweets/search/stream/rules' \
   ] 
 
 }' 
+```
   
 - Streaming url to use (this is where actual streaming begins based on the rule created in the last step) 
 
-curl -X GET -H "Authorization: Bearer $BEARER_TOKEN" "https://api.twitter.com/2/tweets/search/stream" 
+`$ curl -X GET -H "Authorization: Bearer $BEARER_TOKEN" "https://api.twitter.com/2/tweets/search/stream"`
 
 - Documentation on CRUD on rules here(CREATE, DELETE, GET rules): 
 
